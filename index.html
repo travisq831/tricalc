@@ -1,8 +1,19 @@
 <html>
-<script>
-var width = prompt("insert your width in cm");
+<form>
+	<button class="button" type="button" id="start">Start Game</button>
+</form>
+  <script>
+window.onload=main()
+function main() {
+    var btn = document.getElementById("start");
+    btn.addEventListener("click", game);
+}
+    function game(){
+  var width = prompt("insert your width in cm");
 var base = prompt("insert your bases length in cm")
 var square = base * width;
 var tri = square/2;
 document.write("your right triangle has an area of " + tri +"cm squared!")
-</script>
+    }
+  </script>
+  
