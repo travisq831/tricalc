@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+	<button class="button" type="button" id="start">Start Game</button>
+</form>
+<script>
+window.onload=main()
+function main() {
+    var btn = document.getElementById("start");
+    btn.addEventListener("click", game);
+}
+
+function  game(){
+	var num = Math.floor((Math.random() * 10) + 1);
+	var pReturn = confirm("Is the number more than 5? (the ok means true and the cancel means false)")
+	if (pReturn === true){
+	if (num>5){
+		document.write("correct")
+	}
+	else{
+		document.write("incorrect")
+	}
+}
+	if (pReturn === false){
+	if (num<5){
+		document.write("correct")
+	}
+	else{
+		document.write("incorrect")
+	}
+}
+
+function reload(){
+location.reload(true)
+}
+setInterval(reload, 3000);
+}
+
+</script>
+</body>
+</html>
